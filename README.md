@@ -5,7 +5,7 @@
 - Trong quá trình tiền xử lí (pre-processor), các macro được sử dụng trong chương trình được thay thế bởi các khối câu lệnh tương ứng.
   1. Khi ta sử dụng chỉ thị #include, nội dung chứa trong header file sẽ được sao chép vào file hiện tại. Khi include sử dụng dấu ngoặc nhọn < > thì preprocessor sẽ được dẫn tới Include Directory của Compiler.
      
-     #include <file>
+     #include <filename>
   
   2. Một Macro có thể coi là một loại viết tắt. Trước khi sử dụng một macro, phải định nghĩa nó rõ ràng bằng chỉ thị #define, cấu trúc như ví dụ sau: 
   
