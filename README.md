@@ -21,6 +21,7 @@ Quy trình dịch là quá trình chuyển đổi từ ngôn ngữ bậc cao san
 - Giai đoạn dịch ngôn ngữ bậc cao sang Asembly (Compiler)
 - Giai đoạn dịch Asembly sang ngôn ngữ máy (Asember)
 - Giai đoạn liên kết (Linker)
+
   
   ![Screenshot 2023-06-11 115314](https://github.com/anhkhoa15159357/EmbeddedT6/assets/136165537/4351c0fe-bc92-4ac5-8ba7-5d3851494c43)
   
@@ -44,4 +45,23 @@ Quy trình dịch là quá trình chuyển đổi từ ngôn ngữ bậc cao san
   4. Giai đoạn liên kết (Linker)
   - file (.o) --> (.exe) (executable)
   - Trong giai đoạn này mã máy của một chương trình dịch từ nhiều nguồn (file .c hoặc file thư viện .lib) được liên kết lại với nhau để tạo thành chương trình đích duy nhất
-  
+   </details>
+
+ <details>
+ <summary>POINTER</summary>
+
+1. Pointer
+- Định nghĩa và cách khai báo
+ Pointer (con trỏ) là biến lưu địa chỉ bộ nhớ của các biến khác.
+ Cú pháp khai báo: int a = 10; int *p (Khai báo một biến con trỏ p trỏ tới kiểu dữ liệu kiểu int)
+ Ta có thể khai báo một con trỏ void pointer có thể trỏ tới đối tượng bất kì mà không cần quan tâm kiểu dữ liệu của chúng, sau đó ta có thể ép kiểu dữ liệu cho con trỏ
+
+- Pointer hàm
+Là con trỏ trỏ đến vị trí của hàm. Ví dụ ta tạo một hàm (kiểu void) tính tổng của hai số, hai tham số cần truyền vào có kiểu là int.
+Cách khai báo: void (*ptr)(int, int)
+
+- NULL pointer
+Khi ta khai báo 1 con trỏ mà ta chưa sử dụng hoặc khi sử dụng con trỏ xong và không muốn sử dụng nó nữa thì phải gán nó về con trỏ Null. Nếu không gán địa chỉ, con trỏ sẽ trỏ tới 1 địa chỉ rác nào đó. Lúc ta thay đổi giá trị cho nó thì chương trình sẽ bị lỗi.
+
+2. Pointer to pointer
+- Là 1 con trỏ lưu địa chỉ của Pointer khác, kích thước con trỏ phụ thuộc vào kiến thức vi xử lí: máy tính xử dụng vi xử lí 64bit (8byte), 32 bit (4 byte)...
