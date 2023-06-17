@@ -86,3 +86,7 @@ Khi ta khai báo 1 con trỏ mà ta chưa sử dụng hoặc khi sử dụng con
 - Quyền truy cập là read-write.
 - Được sử dụng để cấp phát bộ nhớ động như: Malloc, Calloc,…
 - Sẽ được giải phóng khi gọi hàm free,…
+
+  1. Bộ nhớ Heap và bộ nhớ Stack bản chất đều cùng là vùng nhớ được tạo ra và lưu trữ trong RAM khi chương trình được thực thi.
+  2. Bộ nhớ Stack được dùng để lưu trữ các biến cục bộ trong hàm, tham số truyền vào... Truy cập vào bộ nhớ này rất nhanh và được thực thi khi chương trình được biên dịch.
+  3. Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến con trỏ được cấp phát động bởi các hàm malloc - calloc - realloc (trong C).
