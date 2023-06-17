@@ -65,3 +65,24 @@ Khi ta khai báo 1 con trỏ mà ta chưa sử dụng hoặc khi sử dụng con
 
 2. Pointer to pointer
 - Là 1 con trỏ lưu địa chỉ của Pointer khác, kích thước con trỏ phụ thuộc vào kiến thức vi xử lí: máy tính xử dụng vi xử lí 64bit (8byte), 32 bit (4 byte)...
+
+</details>
+
+ <details>
+ <summary>MEMORY</summary>
+
+### 1. Text
+
+### 2. Data (Initialized Data)
+
+### 3. BSS (Uninitialized Data)
+
+### 4. Stack
+- Quyền truy cập là read-write.
+- Được sử dụng cấp phát cho biến local, input parameter của hàm,…
+- Sẽ được giải phóng khi ra khỏi block code/hàm.
+
+ ### 5. Heap
+- Quyền truy cập là read-write.
+- Được sử dụng để cấp phát bộ nhớ động như: Malloc, Calloc,…
+- Sẽ được giải phóng khi gọi hàm free,…
