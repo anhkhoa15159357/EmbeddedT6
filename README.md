@@ -90,3 +90,24 @@ Khi ta khai báo 1 con trỏ mà ta chưa sử dụng hoặc khi sử dụng con
   1. Bộ nhớ Heap và bộ nhớ Stack bản chất đều cùng là vùng nhớ được tạo ra và lưu trữ trong RAM khi chương trình được thực thi.
   2. Bộ nhớ Stack được dùng để lưu trữ các biến cục bộ trong hàm, tham số truyền vào... Truy cập vào bộ nhớ này rất nhanh và được thực thi khi chương trình được biên dịch.
   3. Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến con trỏ được cấp phát động bởi các hàm malloc - calloc - realloc (trong C).
+
+</details>
+
+ <details>
+ <summary>STATIC</summary>
+
+ ### 1.Static
+
+ - Biến Static cục bộ (Local): tồn tại hết vòng đời của chương trình chính
+ - Static toàn cục (Global): những biến, hàm, mảng chỉ có giá trị trong 1 file nó được khai báo bằng Static, các file khác không thể truy cập được.
+Ứng dụng: Các chương trình lớn sẽ được bao gồm các chương trình nhỏ. Khai báo bằng hàm static ngăn sự can thiệp vào quá trình của chương trình nhỏ. Người lập trình trên chương trình khác chỉ có thể add thử viện hoặc dùng kết quả từ chương trình con.
+
+### 2. Extern
+- Nó là tham chiếu của 1 biến, 1 hàm cùng tên nào đó đã được định nghĩa bên ngoài. Nó chỉ được khai báo chứ không đc gán giá trị.
+- Biến được tham chiếu sẽ ở cấp độ cao nhất là toàn cục. Và có thể nằm trong các file khác.
+- Để sử dụng được biến toàn cục ở file khác, ta phải khai báo thêm từ khóa extern phía trước.
+- Cách build: gcc main.c "file name" -o main và chạy ct: ./main
+
+### 3. Volatile
+- Compiler có chế độ tối ưu (optimizing) chương trình để tăng tốc độ của chương trình lên, sẽ bỏ qua các lệnh lặp, không thay đổi giá trị làm tốn tài nguyên. Nhưng trong 1 số trường hợp như đọc giá trị từ 1 thiết bị bên ngoài thì giá trị có thay đổi nhưng Compiler không nhận thấy và tối ưu lệnh đó khiến kết quả sai.
+- Khai báo lệnh Voltatile để thông báo cho Compiler không được tối ưu biến hoặc hàm có keyword đó.
